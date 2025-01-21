@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  
+}
+section
+{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main
+{
+  background-image: url("back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  
+  overflow: hidden;
+}
+.main-scene {
+  background-image: url("back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.main-scene .head 
+{
+  top: 100px;
+  font-family: "Syne", serif;
+  font-size: 40pt;
+  text-align: center;
+  color: rgba(234, 237, 242, 1);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-scene img
+{
+  z-index: 35;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-scene .head a{
+  /* position: absolute;
+  bottom: 100px; */
+  margin-top: 15px;
+  text-decoration: none;
+  width: 250px;
+  height: 60px;
+  background-color: rgb(19, 19, 19);
+  color:rgba(234, 237, 242, 1); ;
+  border-radius: 5px;
+  font-size: 16pt;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-scene .head h1
+{
+  font-family: "Syne", serif;
+  text-align: center;
+  letter-spacing: -5px;
+  font-size: 80pt;
+  color: rgba(234, 237, 242, 1);
+  z-index: 99;
+}
+.main-scene .head p
+{width: 500px;
+  text-align: justify;
+  font-size: 12pt;
+  color: rgba(234, 237, 242, 1);
+}
+.main-scene div {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.main-scene--level-bottom {
+  background-image: url("drone.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 999;
+  animation: drone-entry 2s ease-in-out forwards; /* Initial animation */
+}
+
+/* Middle Layer (Desk Image) */
+.main-scene--level-middle {
+  background-image: url("fore.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20;
+  animation: desk-entry 2s ease-in-out  forwards; /* Staggered animation */
+}
+.main-scene--level-top {
+  background-image: url("back.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+/* Drone Animation: From Top to Center */
+@keyframes drone-entry {
+  from {
+    margin-top: -50px;
+    opacity: 1;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* Desk Animation: From Bottom to Center */
+@keyframes desk-entry {
+  from {
+    
+    width: 102%;
+    
+  }
+  to {
+    
+    width: 100%;
+    
+  }
+}
